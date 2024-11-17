@@ -1,0 +1,97 @@
+1 What is a Django app, and how does it differ from a Django project? How do you organize your Django projects and apps?
+
+Django Project: A collection of settings and configurations for your entire web application. It includes one or more Django apps and handles the overall configuration, including database settings and URL routing.
+
+Django App: A self-contained module within a project that handles a specific aspect of your application, like user management or blog functionality. Each app can have its own models, views, templates, and static files.
+
+Organization:
+
+Project: Central place where you manage settings and URLs for the whole application.
+Apps: Separate units within the project, each managing a specific part of the functionality.
+
+2 Explain the purpose of Django’s urls.py file. How do you set up URL routing for views, and what are path converters?
+
+The urls.py file in Django is used to route incoming web requests to the appropriate view functions or class-based views based on the URL pattern. It maps URLs to views, which then handle the request and return a response.
+
+Setting up URL Routing:
+Define URL patterns in urls.py using the path() function.
+Each pattern maps a URL to a specific view function or class.
+
+Pathconverter:
+Path converters are used to capture values from the URL and pass them as arguments to the view. They are defined in the URL pattern.
+
+3 What are Django’s views and how do they handle HTTP requests? Can you describe the difference between function-based views (FBVs) and class-based views (CBVs)?
+
+In Django, views are functions or classes that handle HTTP requests and return HTTP responses. They process the incoming request data, interact with the database if needed, and render a response (such as an HTML page) or return data (like JSON).
+
+Handling HTTP Requests:
+
+Views receive a request from the user.
+They process the request (e.g., query the database, handle form submissions).
+They return an HTTP response, which could be an HTML page, a redirect, or data.
+Function-Based Views (FBVs):
+
+Simple and straightforward functions that take a request object and return a response object.
+They are good for simple or one-off views where logic is minimal.
+
+Class-Based Views (CBVs):
+More structured and reusable. They use classes to encapsulate view logic.
+Provide built-in methods for common tasks (like rendering templates or handling forms) and support mixins for additional functionality.
+
+Key Differences:
+FBVs: Easier to write and understand for simple tasks.
+CBVs: Offer more features and reusability for complex views, allowing you to organize code better and use built-in behaviors.
+
+Built-in Methods: CBVs come with pre-defined methods for common tasks. For example, get() for handling GET requests and post() for handling POST requests. These methods can be overridden to customize behavior.
+Mixins: CBVs support mixins, which are reusable components that can add specific functionality (like authentication or form handling) to views without needing to duplicate code.
+
+4 How does Django’s admin interface work? What are some common customizations you can make to the admin interface?
+
+Django’s admin interface provides a web-based tool for managing your data models. It automatically generates a CRUD interface for models you register with it.
+
+How It Works:
+Model Registration: Register models in admin.py using admin.site.register().
+Admin Class: Customize the interface by creating a class inheriting from admin.ModelAdmin.
+Admin Site: The admin interface is served at the /admin/ URL.
+Common Customizations:
+Field Display: Use list_display, search_fields, and list_filter to control which fields are shown and how.
+Forms: Customize forms with the form attribute.
+Inline Models: Use InlineModelAdmin classes to manage related models within the same page.
+Custom Actions: Add custom bulk actions to perform operations on selected items.
+Templates: Override default admin templates for custom styling.
+
+5 Discuss the use of Django’s Model class. How do you define fields and relationships between models?
+
+6 How do you handle form validation in Django? What are the differences between using Form and ModelForm?
+
+
+
+
+
+What are Django’s QuerySet methods? Can you provide examples of commonly used methods and explain their purpose?
+
+Explain the concept of Django’s migrations. How do you create, apply, and rollback migrations?
+
+How do Django’s settings.py and configurations work? How would you manage different settings for development, testing, and production environments?
+
+Discuss how Django handles static files and media files. How do you serve static files in a production environment?
+
+What are Django’s middleware components? How can you add custom middleware to handle specific tasks?
+
+How does Django handle authentication and authorization? Explain how you can implement custom user models and permissions.
+
+What is Django’s Context and how does it work with templates? How can you pass context data to templates and use template tags and filters?
+
+Explain the use of Django’s built-in generic views. How do they simplify common operations such as listing objects and displaying details?
+
+How do you use Django’s cache framework? What are the different types of caching available and how do you configure them?
+
+What are Django signals, and how might you use them in your applications? Can you provide a practical example of a signal?
+
+Describe how to handle errors and exceptions in Django views. How can you create custom error pages?
+
+How do you manage third-party libraries and dependencies in a Django project? What tools and best practices do you use?
+
+Discuss how you can improve the performance of a Django application. What are some common strategies for optimizing database queries and view rendering?
+
+What is Django’s Template system? How does it differ from other templating engines, and what are some advanced template features you can use?

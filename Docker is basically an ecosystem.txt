@@ -1,0 +1,76 @@
+Docker is basically an ecosystem where you can create containers, where yu can ru  containers.
+but then why do we need it?
+see, we can talk about what is docker in datail, but then the main question is why do we need dockers?
+
+Now think about this as a developer or as a tester, or as operation team.
+what we do is we work with software
+the ultimate thing is to provide a software so that your user can use it.
+im talking about the web application now or web services
+so what we do is we build an application
+normally development team, they build a software and then this software goes for the testing.
+so testing team will be doing the testing on it, or and then after that, if everything is going good, of course if something goes wrong it comes back to development team.
+but what if everything is perfect
+then it goes for the operation team so that they can deploy the application on broad server
+of course, depending upon company this process might change
+but then we have three steps, right?
+Develop the application, test the application and ship it to the production server so that we can run there.
+the thing is when, as a developer, when yu build an application, you might be using some framework
+so let's say if youre working on python, kyou might be using Django framework.
+maybe you want to build a web application using, using python, so youall be using Django framework
+
+so what we do is when, when we want to build an application, we have a framework and this framework will need certain libraries, some dependencies or maybe some os level freatures. 
+
+so what we do is when yu want to start with the application you need before, evenbefore touching the application, you have to download dependencies, you have to download dependencies, yu have to download the libraries
+
+now the thing is, after researching which library to use, after researching with dependency to use, you will download them and you, yu will have those things on your machine
+so you have your framework, you have your application, yu have your dependencies and may be some hostel features
+
+now everything is done right, your product is with you.
+and of course the next step whuld be testing team.
+
+but the problem is the testing team, when they start using your application, they might face issues
+there's nothing wrong with the software
+what went wrongis with the dependencies because the dependency which you have used, of course you have list them all the dependencies which are required.
+
+so they might be downloading those dependiencies, or may be yur are sending those dependencies in a jarfile or in a zip file
+
+ the problem is it's not jus the number of dependencies, it's also the version, right?
+
+so maybe your have used a version 4.2 and then they might be using 4.0
+
+so there will be a clash, yur softwre will generate issues.
+the problem is with the dependencies and the libraries
+and sometimes, you know what happens when you are building an application, you application may need some extra dependencies which even you are not aware of
+
+so what happens is maybe youthe worked onsome earlie projects and those projects needed some dependencies which you have in your machine, but the same thing is not there in the desktop machine
+a testing team will say, hey, developer, something went wrong
+something went wrong because of you
+and yu will be saying, hey, it was working on my machine, its' not working on your achine, so its' something wrong with your machine
+we can have blame game there 
+that's not how it happened In the company
+but then you can imagine the scenario, right?
+they might be thinking this in the head
+
+so what if you can, when you, are shipping the application, application which you have build, not just application, but you have to ship everything, the framework dependencies and libraries, everything
+
+so you will take, take the entire stuff and ive it to the testing team
+but is it possible, it is possible to give everything
+
+the thing, is, some dependencies and libraries are dependent on the OS, so you have to give the entire os, and that's not practically possible, right?
+You can't copy your C drive and give it to someone else.
+and that solution is hypervisor
+ If you don't know about hypervisor, think about virtual machines or VMware, if you, that's very famous software which you might have used in your college days or in your company
+
+so what we do using the virtual machine is so you have a hardware, so you have a physical hardware
+on that hardware you install on OS.
+Of course, every app, every machine has an os, maybe windows or Linux based OS, on Macinatosh.
+
+Now on that os you will be installing hypervisor, a vmwar basically
+
+now this VMware can install another os.
+now the amazing thing, is, when you install the new OS, now this OS can be packed and you can ship it, so you can create an image of it.
+So the amazing  thing is when you give this OS to someone else, they can load the same OS and this OS will have everything
+
+So what im saying is hardware os, hypervisor, and your os, the custom os or I, the virtual os
+Now,on this virtual os, you can do anything you want
+you can install software, you can install

@@ -1,0 +1,97 @@
+#python life
+
+What is Serializer?
+
+Serializers in Django REST Framework are responsible for converting objects into data types understandable by javascript and front-end frameworks. Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data. the serializers in REST framework work very similarly to Django's Form and ModelForm classes. The two major serializers that are most popularly used are ModelSerializer and HyperLinkedModelSerializer.
+
+what is api_view - decorator
+The core of this functionality is the api_view decorator. which takes a list of Http methods that your viewshould respond to. for example, this is how we would write a very simple view that just manually returns some data:
+@api_view()
+
+
+Generic API View Mixins
+This class extends Rest framework's APIView class, adding commonly required behavior for standard list and detail views.
+Each of concrete generic views provided is built by combining GenericAPIView, with one or more mixin classes.
+
+queryset - 
+serializer_class - 
+lookup_field - 
+lookup_url_kwarg - 
+
+
+What is Mixin
+The mixin classes provide the actions that are used to provide the basic view behavior. Note that the mixin classes provide action methods rather than defining the handler methods, such as .get() and .post(), directly. This allows for more flexible composition of behavior.
+
+The mixin classes can be imported from rest_framework.mixins.
+
+ListModelMixin - get the resource from database - .list(request, *args, **kwargs)
+200 ok
+CreateModelMixin - post the resource to database - .create(request, *args, **kwargs) 
+201 create, 400 bad request
+RetrieveModelMixin - retrieve specific item by its id - .retrieve(request, *args, **kwargs)
+200 ok, 404 not found
+UpdateModelMixin - to update specific with with id - .update(request, *args, **kwargs)
+200 ok, 400 bad request
+DestroyModelMixin - to delete a item - .destroy(request, *args, **kwargs)
+204 no content, 404 not found
+----------------------------------------
+
+from rest_framework.generics import GenericAPIView
+from rest_framework.mixins import ListModelMixin, CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, UpdateModelMixin
+# Create your views here.
+
+def display(request):
+    return HttpResponse('welcome to GenericAPIViews')
+
+'''
+class ListStudent(GenericAPIView, ListModelMixin):
+	queryset=Student.objects.all()
+	serializer_class=StudentSerializer
+	def get(self, request):
+		return self.list(request)
+
+class CreateStudent(GenericAPIView, CreateModelMixin):
+	queryset=Student.objects.all()
+	serializer_class=StudentSerializer
+	def post(self, request):
+		return self.create(request)
+
+class RetrieveStudent(GenericAPIView, RetrieveModelMixin):
+	queryset=Student.objects.all()
+	serializer_class=StudentSerializer
+	def get(self, request, **kwargs):
+		return self.retrieve(request, **kwargs)
+	
+class UpdateStudent(GenericAPIView, UpdateModelMixin):
+	queryset=Student.objects.all()
+	serializer_class=StudentSerializer
+	def put(self, request, **kwargs):
+		return self.update(request, **kwargs)
+	
+class DestroyStudent(GenericAPIView, DestroyModelMixin):
+	queryset=Student.objects.all()
+	serializer_class=StudentSerializer
+	def delete(self, request, **kwargs):
+		return self.destroy(request, **kwargs)
+'''
+#OR
+
+# 1: it combines the both List&Create
+class List_Create_Student(GenericAPIView, ListModelMixin, CreateModelMixin):
+	queryset=Student.objects.all()
+	serializer_class=StudentSerializer
+	def get(self, request):
+		return self.list(request)
+	def post(self, request):
+		return self.create(request)
+	
+# 2: it combines the three Retrieve&Update&Destroy
+class Retrieve_Update_Destroy_Student(GenericAPIView, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin):
+	queryset=Student.objects.all()
+	serializer_class=StudentSerializer
+	def get(self, request, **kwargs):
+		return self.retrieve(request, **kwargs)
+	def put(self, request, **kwargs):
+		return self.update(request, **kwargs)
+	def delete(self, request, **kwargs):
+		return self.destroy(request, **kwargs)

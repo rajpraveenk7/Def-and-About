@@ -1,0 +1,11 @@
+what is postman
+what is header
+https://youtu.be/Jzwt7T7wiTw?si=SpSBo2VfSMfUw_hr
+https://youtu.be/50BHA2sQIV8?si=0rH0F3BHCO2fQz5z - project
+
+snippet
+headers
+pagination
+can you give important concept in djangorestframework to learn
+
+can you give important concept in django to learn 

@@ -1,0 +1,45 @@
+Explain the difference between deepcopy and shallow copy. When would you use each?
+
+Deepcopy creates a new object and recursively copies all objects found in the original. Shallow copy creates a new object but does not create copies of nested objects; instead, it copies references to them.
+How do you manage package dependencies in Python projects?
+
+Discuss tools like pip, virtualenv, venv, pipenv, and poetry. Mention how to use requirements.txt or pyproject.toml for specifying dependencies.
+What is the difference between __str__ and __repr__ methods in Python?
+
+__str__ is intended to provide a user-friendly string representation of an object, while __repr__ is intended to provide an unambiguous string representation that could be used to recreate the object.
+How would you handle exceptions in Python?
+
+Explain the use of try, except, else, and finally blocks. Discuss custom exceptions and how to raise them.
+Can you explain how list comprehensions work and provide an example?
+
+List comprehensions provide a concise way to create lists. For example: [x**2 for x in range(10) if x % 2 == 0] creates a list of squares of even numbers from 0 to 9.
+What are Python decorators and how are they used?
+
+Decorators are functions that modify the behavior of another function or method. Discuss how to create and apply decorators, and provide examples like logging or access control.
+What is a generator in Python and how does it differ from a regular function?
+
+Generators use the yield keyword to produce a sequence of values lazily, whereas regular functions return a value and exit. Generators are useful for iterating over large datasets or streams of data.
+How does Python's garbage collection work?
+
+Python uses reference counting and a cyclic garbage collector to manage memory. Explain how objects are collected when their reference count drops to zero and how the garbage collector handles reference cycles.
+What is the purpose of self in Python class methods?
+
+self refers to the instance of the class and allows access to attributes and methods associated with that instance. It must be the first parameter in instance methods.
+How would you implement a singleton pattern in Python?
+
+Explain how to ensure that only one instance of a class is created. Discuss various approaches, such as using a class-level variable or a metaclass.
+What are *args and **kwargs and how are they used in function definitions?
+
+*args allows a function to accept a variable number of positional arguments, while **kwargs allows for a variable number of keyword arguments. Explain with examples.
+Describe how the Python Global Interpreter Lock (GIL) affects multithreading.
+
+The GIL prevents multiple native threads from executing Python bytecodes simultaneously, which can be a limitation in CPU-bound multi-threaded programs. Discuss how it affects performance and alternatives like multiprocessing.
+What is the difference between is and == in Python?
+
+is checks for object identity (whether two references point to the same object), while == checks for value equality (whether the values of two objects are the same).
+How would you optimize a slow Python function?
+
+Discuss profiling tools like cProfile, optimizing algorithms and data structures, and potential use of external libraries (e.g., NumPy for numerical operations) or parallel processing.
+Explain how you would use Python's with statement and what its advantages are.
+
+The with statement simplifies exception handling by encapsulating common preparation and cleanup tasks. It is typically used with file operations and resource management through context managers.

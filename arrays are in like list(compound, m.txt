@@ -1,0 +1,28 @@
+arrays are in like list(compound, mutable and not heterogeneous)
+as compared to list(very slow), but this array(very fast) for million, trillion of data
+but it only it store the same datatype
+
+
+numpy array is just like a list, but its more powerful.
+numpy - Numeric Python.
+
+
+
+math funtions
+ 
+
+practice;
+np1=np.array([1,2,3,4,5,6,7,8,9,10])
+np.shape(list1)
+
+np2=arange(10)
+print(np2)
+
+np3=np.arange(0,10,2)
+print(np3)
+
+np4=np.zeros(10)
+print(np4)
+
+np5=np.zeros((2,10))
+print(np5)

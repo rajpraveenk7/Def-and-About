@@ -1,0 +1,23 @@
+os
+computer networking
+dbma
+client server architect
+webserver and apachee
+api's
+load balancing
+gateways
+
+cloud models
+iaas, paas, saas
+virtualization, vmm, hyperviser
+
+azure, gcp, aws
+
+--------------------------------------------------------------
+forms 
+model forms
+validations
+
+primary key 
+foreign key
+how to configure between models or databases in Django
