@@ -1,0 +1,24 @@
+Django: https://www.interviewbit.com/django-interview-questions/#django-project-vs-app
+
+
+to secure our data, not to access by other, we choose authentication and permission
+
+authentication is the mechanism of associating an incoming request with a set of identifying credentials, such as he user the request come from, or the token that it was signed with. the permission and throttling policies can then use those credentials to determine if the request should be permitted
+
+rest framework provides a number of authentication schemes out of the box, and also allows you to implement custom schemes.
+
+authentication is always run at the very start of the view, before the permission and throttling checks occurs, and before any other code is allowed to proceed.
+
+the request.user property will typically be set to an instance of the contrib.auth package's User class.
+
+the request.auth property is used for any additional authentication information, for example, it may be used to represent an authentication token that the request was signed with.
+
+Types of authentications:
+BasicAuthentication
+TokenAuthentication
+SessionAuthentication
+RemoteUserAuthentication
+
+BasicAuthentication - authentication or identification by itself is not usually sufficient to gain access to information or code. for that the entity requesting access must have authorization
+
+the simple style of permission would be to allow access to any authenticated user, and deny access to any unauthenticated user. this corresponds to the  IsAuthenticated class in REST framework 

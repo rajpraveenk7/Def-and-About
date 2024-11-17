@@ -1,0 +1,52 @@
+Django - web development - heavy weight
+Flask - mechine learning, deep learning - light weight
+
+
+Flask is a web framework that provides libraries to build lightweight web application in python. It is developed by Armin Ronacher who leads an international group of python enthusiasts (POCCO). it is based on WSGI toolkit and jinja2 template engine. flask is considered as micro framework.
+
+
+Wsgi(web server gateway interface) is an interface between web servers and web apps for python. mod_wsgi is a Apache HTTP server module that enables Apache to serve Flask application
+
+waitness		Pyramid
+nginx in wsgi	(WSGI)	Flask
+gunicorn		Django
+
+Jinja2 is a web template engine which combines a templets with a certain data source to render the dynamic web pages.
+
+1 app.py -input-> 2 python -data-> 3 flask-data-><-page- 4 Jinja -template-(index.html)
+
+FLASK is famous because of WSGI and Jinja2
+
+Features
+1 fast debugging
+2 restful request handling
+3 application programming interface
+4 flexible configuration 
+5 integrated unit testing
+
+
+companies uses flask
+Netflix, Reddit, Airbnb, Lyft, Mozilla, Mit, uber
+
+
+advantages of flask
+higher compatibility with latest technologies
+technical experimentation
+easier to use for simple cases
+codebase size is relatively smaller
+high scalability for simple applications,
+easy to build a quick prototype
+routing url is easy
+easy to develop and maintain applications
+database integration is easy 
+small core and easily extensible 
+minimal yet powerful platform
+lots or resources available online especially on GitHub 
+
+disadvantages of flask
+higher maintenance costs for more complex systems
+complicated maintenance for large implementations.
+async may be a little problem
+lack of database and orm
+setting up a large project requires some previous knowledge of framework
+offers limited support and smaller community compared to Django

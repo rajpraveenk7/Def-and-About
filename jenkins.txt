@@ -1,0 +1,42 @@
+Jenkins:
+
+Jenkins is a open source automation server that helps the developers automake the process of build and test and deploying software
+
+We have 2 fundamental practice
+CI and CD, is software development practice
+continuous integration: where code changes are automatically tested and merged into a shared repository frequently.
+continuous deployment: where code changes are automatically deployed to production as soon as they pass automated testing. 
+
+Jenkins is a open source automation server that helps the developers automake the process of build and test and deploying software
+
+CI: after the developing the project or any version changes may applied in the project, we save it GitHub repository, when we set our repo urls to Jenkins 
+it automatically process our code
+
+CD: after the integration it automatically deploy in production, this Jenkins helps it automatically
+
+in olden days we need manager/lead to integrate and deployment software, to make this process better we use Jenkins to auto CI and CD
+integrate(means verify the code)
+deployment(means to merge the code in production)
+
+
+Jenkins is a popular open source automation tool which is used for continuous integration and continuous deployment processes.
+Jenkins is a open source automation server that helps the developers automake the process of build and test and deploying software
+OR
+Jenkins is a powerful open-source automation server used primarily for continuous integration and continuous delivery (CI/CD), it helps the developers automake the process of build and test and deploying software
+
+-------------------------
+open source automation server
+in the process of software development life cycle we build, test, deploy
+it is server based system
+git and other version control it support
+Jenkins is useful to create and implement through pipeline of ci and cd workflow 
+
+process - 
+software development:
+build code
+store in git
+pull the code for unittest
+after the test we deploy in production environment
+to automate the whole process - we use Jenkins
+
+

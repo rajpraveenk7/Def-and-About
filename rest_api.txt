@@ -1,0 +1,75 @@
+Django REST framework is a powerful and flexible toolkit for building web apis 
+
+Why we need?
+drf is the Web browsable API and we can use if for the Restful Web-services and Authentication policies are very effective here, data can be serialization in the drfwork - already using mozilla, redhat, Heroku, evertbrite
+
+api- application programing interface
+which bridge between two application or two platform 
+
+subsets of api
+1 soap - soap is the simple object access protocol, here XML only can be allowed
+2 rest - representational state transfer, it allow, plant text, html, xml and json
+
+only REST
+
+api - application programming interface
+rest framework - representational state transfer
+no wsdl required (web server description language)
+every url denotes the representation of object
+GET, POST, PUT, PATCH, DELETE
+HTTP
+Limit of length of the data
+
+JSON
+javascript object notation
+light weight, high performance and human readable message
+
+
+--------------------------------------------
+
+if you work in tech or in anything adjacent to tech, you've probably here the abbreviation api beig thrown around.
+so let's talk about apis
+what are they and why do we need them
+
+let's start with what is an api
+api stands for application programming interface, fancy words
+so let's break it down 
+
+application in this context just means any software that has a specific functionality or purpose interface refers to a contract or a protocol that dictates how two applications talk to each other using requests and responses
+so, put together, an api is simple a way for different systems or applications to communicate with each other
+okey, cool. in theory.
+
+so why do we need apis?
+let's start with a non technical analogy first
+let's say you have dinner reservation for tonight for three people, but you want to change it to six because some friends decided to join you at the last minute
+so you call the restaurant, ask them if it's possible to do that, and the customer service person puts you on hold.
+it takes a minute, but they finally come back and they say yes.
+simple
+you called, someone made a request, and you got a response, you or no
+
+Now, let's say that there was no customer service person and that it was up to you to figure out how many people have made reservations for the same time at this restaurant
+How many tables do they have free at that time
+what's their kitchen capacity, what's their waitstaff capacity
+all the figure out whether you can add three more people to your reservation
+that's a lot of unnecessary work on your part, work that you, the customer, have no expertise in.
+and it means that the restaurant has to reveal a lot of data to you, maybe even private data about who's eating there that night and who works there, etcetera.
+
+in this analogy, the restaurant is an application that provides a specific service or function, which is to feed you.
+you are an application that is trying to get fed with a group of friends.
+the customer service rep from the restaurant is the restaurants api
+that is teh interface through which you can communicate with the restaurant and make requests, like changing the number or a reservation.
+and You can do that without having to dive into the messy details about how restaurant reservations work or anything like that
+
+for a more technical example, now think about apples weather app
+do we think that apple decided to set up weather monitoring stations around the world?
+that's really expensive endeavor
+and if it was super critical to apple's business model, then maybe, sure, we could see that happening
+but there are already services out there that meticulously collect global weather data.
+services like weather.com 
+so if weather.com, creteats an api through which anybody can access their data, but only in the ways the weather.com allows, then apple could just use the api to populate their weather app.
+so how do apis actually work
+lets use the example of web apis, which are the type of apis tha deliver client requests and return responses via json or xml, usually over the internet
+each request and response cycle is an api call
+a request typically consists of a server endpoint url and a request method, usually through http or hypertext transferred protocol  
+the request method indicates the desired api action the http response contains a status code a header and a response body, 
+the response body varies depending on the request and it could be the server resource a client needs to access or any application specific messages one status code you might be familiar with when you're tried to visit a website that might be down or doesn't exist anymore is the error 404 code url not found and that's it request and response 
